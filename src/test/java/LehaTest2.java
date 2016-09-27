@@ -15,7 +15,6 @@ public class LehaTest2 {
     WebDriverWait wait = new WebDriverWait(driver, 10);
 
 
-
     @Test
 
     public void test1() throws Exception {
