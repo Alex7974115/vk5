@@ -22,11 +22,13 @@ public class LehaTest2 {
         driver.get("https://vk.com/");
         driver.findElement(By.id("index_email")).sendKeys("electroalex2009@yandex.ru");
         driver.findElement(By.id("index_pass")).sendKeys("19911991010679");
-        driver.findElement(By.xpath("//button[@id='index_login_button']")).click();
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[@id='l_msg']"))).click();
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@class='nim-dialog--name-w _im_dialog_name']/span"))).click();
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@id='im_editable0']"))).sendKeys("Леха написал автотест");
-        driver.findElement(By.xpath("//button[@class='flat_button fl_r _im_send']")).click();
+        driver.findElement(By.id("index_login_button")).click();
+        wait.until(ExpectedConditions.elementToBeClickable(By.id("l_fr"))).click();
+        wait.until(ExpectedConditions.elementToBeClickable(By.id("s_search"))).sendKeys("Фролов Владимир");
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='/vf_adc']"))).click();
+        wait.until(ExpectedConditions.elementToBeClickable(By.id("profile_message_send"))).click();
+        driver.findElement(By.id("mail_box_editable")).sendKeys("Леха пишет новый автотест");
+        driver.findElement(By.id("mail_box_send")).click();
           }
 
 }
